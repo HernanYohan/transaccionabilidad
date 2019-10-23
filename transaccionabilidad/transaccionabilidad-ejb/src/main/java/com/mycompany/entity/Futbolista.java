@@ -21,29 +21,52 @@ import javax.persistence.Table;
 @Table(name = "futbolista")
 public class Futbolista implements Serializable {
     private static final long serialVersionUID = 1L;
+    /**
+     * se guarda el id de la tabla
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    /**
+     * se guarda el nombre del futbolista
+     */
     @Column(name = "nombre")
     private String nombre;
+    /**
+     * se guarda el apellido del futbolista
+     */
     
     @Column(name = "apellido")
     private String apellido;
-    
+    /**
+     * se guarda el correo del futbolista
+     */
     @Column(name = "correo")
     private String correo;
-
+    /**
+     * constructor
+     * @param id
+     * @param nombre
+     * @param apellido
+     * @param correo 
+     */
     public Futbolista(int id, String nombre, String apellido, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
     }
-
+    /**
+     * constructor
+     */
     public Futbolista() {
     }
-
+    /**
+     * constructor
+     * @param nombre
+     * @param apellido
+     * @param correo 
+     */
     public Futbolista(String nombre, String apellido, String correo) {
         this.nombre = nombre;
         this.apellido = apellido;

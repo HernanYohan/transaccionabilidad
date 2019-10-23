@@ -23,25 +23,44 @@ import javax.persistence.Table;
 public class Equipo implements Serializable {
     private static final long serialVersionUID = 1L;
     
+    /**
+     * se guardara el id de la tabla
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+    /**
+     * se guarda el nombre del equipo
+     */
     @Column(name = "nombre")
     private String nombre;
-    
+    /**
+     * se guarda el tipo de equipo 
+     */
     @Column(name = "tipo")
     private int tipo;
 
+    /**
+     * constructor
+     * @param id
+     * @param nombre
+     * @param tipo 
+     */
     public Equipo(int id, String nombre, int tipo) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
     }
-
+    /**
+     * constructor vacio
+     */
     public Equipo() {
     }
-
+    /**
+     * constructor
+     * @param nombre
+     * @param tipo 
+     */
     public Equipo(String nombre, int tipo) {
         this.nombre = nombre;
         this.tipo = tipo;

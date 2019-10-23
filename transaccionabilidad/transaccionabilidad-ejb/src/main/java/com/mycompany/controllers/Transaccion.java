@@ -15,7 +15,7 @@ import javax.ejb.TransactionAttributeType;
 
 /**
  *
- * @author DJMEDINA
+ * @author Hernan
  */
 @Stateless
 public class Transaccion implements TransaccionLocal {
